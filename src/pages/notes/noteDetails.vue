@@ -62,10 +62,7 @@ function deleteNote(id) {
     router.push({ name: "notes" });
   });
 }
-const remove = () => {
-  notes.value.splice(noteId.value, 1);
-  router.push("/");
-};
+
 </script>
 
 <style lang="scss" scoped>
