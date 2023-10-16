@@ -1,6 +1,5 @@
 import { boot } from "quasar/wrappers";
 import { LocalStorage } from "quasar";
-import Notify from "boot/notification";
 
 export default boot(({ router }) => {
   router.beforeEach((to, from, next) => {
