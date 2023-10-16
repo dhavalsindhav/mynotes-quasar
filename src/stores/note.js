@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 import api from "src/apis/index"; // Custom middle api js to handle all api requests and custom
 import notification from "src/boot/notification";
 import { LocalStorage } from "quasar";
-import { useRouter } from "vue-router";
 import { NOTE } from "src/apis/constant";
 export const useNoteStore = defineStore("note", {
   state: () => ({
