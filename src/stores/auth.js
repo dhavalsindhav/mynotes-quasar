@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 import api from "src/apis/index"; // Custom middle api js to handle all api requests and custom
 import notification from "src/boot/notification";
 import { LocalStorage } from "quasar";
-import { useRouter } from "vue-router";
 import { USER } from "src/apis/constant";
 export const useAuthStore = defineStore("auth", {
   state: () => ({
@@ -63,7 +62,6 @@ export const useAuthStore = defineStore("auth", {
               LocalStorage.remove("user");
               LocalStorage.remove("access_token");
               notification.success(res.message);
-              const router = useRouter();
               location.reload();
             } else {
               notification.error(res.message);
