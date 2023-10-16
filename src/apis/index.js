@@ -109,7 +109,7 @@ export default {
         // Notify.error(error.response.data.message ?? "The requested resource was not found.");
       } else {
         // console.log(error.response.data);
-        let errorMessage = error?.response?.data?.errors;
+        let errorMessage = error.response.data.errors;
         if (errorMessage) {
           if (errorMessage.required) {
           } else {
@@ -120,8 +120,8 @@ export default {
             Notify.error("Data validation failed");
             return;
           }
-        } else if (error?.response?.data?.code) {
-          const code = error?.response?.data?.code;
+        } else if (error.response.data.code) {
+          const code = error.response.data.code;
           if (code == "ER_DUP_ENTRY") {
             Notify.error(
               "Please check your input. This value is already in use."
