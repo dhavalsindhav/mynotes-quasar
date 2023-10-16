@@ -30,7 +30,7 @@
 <script setup>
 import notification from "src/boot/notification";
 import { useNoteStore } from "src/stores/note";
-import { computed, defineAsyncComponent, ref } from "vue";
+import { computed, defineAsyncComponent } from "vue";
 import { useRoute, useRouter } from "vue-router";
 const Container = defineAsyncComponent(() =>
   import(
