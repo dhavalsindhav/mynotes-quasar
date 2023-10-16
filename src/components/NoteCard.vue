@@ -14,4 +14,5 @@ const props = defineProps({
   title: String,
   description: String,
 });
+  console.log(props)
 </script>
