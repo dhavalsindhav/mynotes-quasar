@@ -12,7 +12,7 @@ export default boot(({ app, store, ssrContext }) => {
       isBase64(str) {
   const base64Regex = /^[A-Za-z0-9+/]*={0,2}$/;
   return base64Regex.test(str);
-}
+},
       // Common validations start
       required(val, fieldName = null, dependentField = true) {
         // console.log(process.env.CLIENT_VALIDATION);
