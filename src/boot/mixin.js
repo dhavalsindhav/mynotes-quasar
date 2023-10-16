@@ -10,9 +10,9 @@ export default boot(({ app, store, ssrContext }) => {
         return DateTime.fromISO(time).toRelative();
       },
       isBase64(str) {
-        const base64 = /^[data]{4}[:]{1}/;
-        return base64.test(str);
-      },
+  const base64Regex = /^[A-Za-z0-9+/]*={0,2}$/;
+  return base64Regex.test(str);
+}
       // Common validations start
       required(val, fieldName = null, dependentField = true) {
         // console.log(process.env.CLIENT_VALIDATION);
