@@ -16,7 +16,7 @@ const authInterceptor = (config) => {
   /** add auth token */
   const token = LocalStorage.getItem("access_token");
   if (token && token !== "undefined" && token.length > 0) {
-    config.headers.Authorization = token ? `Bearer ${token}` : "";
+    config.headers.Authorization = `Bearer ${token}` : "";
   }
   return config;
 };
