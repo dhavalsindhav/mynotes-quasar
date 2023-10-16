@@ -112,6 +112,7 @@ export default {
         let errorMessage = error.response.data.errors;
         if (errorMessage) {
           if (errorMessage.required) {
+            // console.log(errorMessage.required);
           } else {
             // const er = [...errorMessage].shift();
             // const [er] = errorMessage;
